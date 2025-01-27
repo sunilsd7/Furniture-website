@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+
 
 const Footer = () => {
   return (
@@ -13,10 +13,10 @@ const Footer = () => {
             quis nostrud exercitation ullamco laboris.
           </p>
           <div className="mt-6">
-            <Button
+            <button
               style="font-bold py-3 px-6 bg-white text-blue rounded-lg hover:bg-gray-100 transition-colors duration-300"
               text="Follow Us"
-            />
+            ></button>
           </div>
         </div>
 

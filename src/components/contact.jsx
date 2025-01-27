@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+
 
 const Contact = () => {
   return (
@@ -19,10 +19,11 @@ const Contact = () => {
           placeholder="example@email.com"
           className="w-full md:w-2/3 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <Button
-          style="w-full md:w-1/3 text-white bg-blue px-8 py-3 font-bold rounded-lg hover:bg-dark-blue transition-colors duration-300"
-          text="Submit"
-        />
+        <button
+          className="w-full md:w-1/3 text-white bg-blue px-8 py-3 font-bold rounded-lg hover:bg-dark-blue transition-colors duration-300"
+          
+        >Submit
+        </button>
       </div>
     </div>
   );
