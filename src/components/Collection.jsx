@@ -1,28 +1,50 @@
-
-import React from 'react'
-import sofa from '../assets/sofa.png'
-import hanginglamp from '../assets/hanginglamp.png'
-import decoration from '../assets/decoration.png'
-
+import React from 'react';
+import sofa from '../assets/sofa.png';
+import hanginglamp from '../assets/hanginglamp.png';
+import decoration from '../assets/decoration.png';
 
 const Collection = () => {
   return (
-   <>
-   <div className="text-center center">
-    <br />
-    <p ><span className="font-bold text-2xl">Inspiration Colection</span>.<br />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  
-  </div>
+    <>
+      {/* Text Section */}
+      <section className="text-center mt-8 px-4">
+        <p className="font-bold text-2xl mb-4">Inspiration Collection</p>
+        <p className="text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </section>
 
-  <div className="flex py-8 px-10 mt-8 container  screen " >
-    <img src={decoration} alt=""  className="px-3 py-7 "/>
-    <img src={sofa} alt=""  className='px-3 '/>
-    <img src={hanginglamp} alt="" className=' px-3 py-7 '/>
-  </div>
+      {/* Image Grid Section */}
+      <div className="flex flex-col md:flex-row justify-center items-center py-8 px-4 md:px-10 mt-8 space-y-6 md:space-y-0 md:space-x-6">
+        {/* Decoration Image */}
+        <div className="w-full md:w-1/3 lg:w-1/4">
+          <img
+            src={decoration}
+            alt="Decoration item"
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
 
-   </>
-  )
-}
+        {/* Sofa Image */}
+        <div className="w-full md:w-1/3 lg:w-1/4">
+          <img
+            src={sofa}
+            alt="Sofa"
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
 
-export default Collection
+        {/* Hanging Lamp Image */}
+        <div className="w-full md:w-1/3 lg:w-1/4">
+          <img
+            src={hanginglamp}
+            alt="Hanging lamp"
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Collection;
