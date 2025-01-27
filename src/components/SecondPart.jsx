@@ -1,6 +1,6 @@
 import React from 'react';
 import Overlay from './Overlay';
-import Buttonn from '../components/Button';
+import Button from '../components/Button';
 
 const SecondPart = () => {
   return (
@@ -14,7 +14,7 @@ const SecondPart = () => {
             quis nostrud exercitation ullamco laboris.
           </p>
           <div>
-            <Buttonn
+            <Button
               style="text-white bg-blue px-9 py-4 font-bold rounded-2xl hover:bg-dark-blue transition-colors duration-300"
               text="Learn More"
             />
