@@ -1,6 +1,6 @@
 import React from 'react';
 import banner from '../assets/hero.png';
-import Button from '../components/Button';
+
 
 const Hero = () => {
   return (
@@ -27,10 +27,10 @@ const Hero = () => {
             tellus, luctus nec ullamcorper mattis.
           </p>
           <div className="buttonhero">
-            <Button
-              style="text-white bg-blue px-6 py-3 md:px-9 md:py-4 font-bold rounded-2xl hover:bg-dark-blue transition-colors duration-300"
-              text="BUY NOW"
-            />
+            <button className="text-white bg-blue px-6 py-3 md:px-9 md:py-4 font-bold rounded-2xl hover:bg-dark-blue transition-colors duration-300"
+              
+            >BUY NOW</button>
+           
           </div>
         </div>
       </div>
