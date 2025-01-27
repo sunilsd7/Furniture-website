@@ -1,6 +1,6 @@
 import React from 'react';
 import banner from '../assets/hero.png';
-import Buttonn from './Button';
+import Buttonn from '../components/Button';
 
 const Hero = () => {
   return (

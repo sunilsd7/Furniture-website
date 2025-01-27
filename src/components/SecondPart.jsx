@@ -1,6 +1,6 @@
 import React from 'react';
 import Overlay from './Overlay';
-import Buttonn from './Button';
+import Buttonn from '../components/Button';
 
 const SecondPart = () => {
   return (
