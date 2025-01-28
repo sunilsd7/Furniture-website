@@ -14,9 +14,9 @@ const Footer = () => {
           </p>
           <div className="mt-6">
             <button
-              style="font-bold py-3 px-6 bg-white text-blue rounded-lg hover:bg-gray-100 transition-colors duration-300"
-              text="Follow Us"
-            ></button>
+              className="font-bold py-3 px-6 bg-white text-blue rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              
+            >Follow us</button>
           </div>
         </div>
 

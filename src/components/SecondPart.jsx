@@ -16,8 +16,8 @@ const SecondPart = () => {
           <div>
             <button
               className="text-white bg-blue px-9 py-4 font-bold rounded-2xl hover:bg-dark-blue transition-colors duration-300"
-              text="Learn More"
-            ></button>
+             
+            >Learn More</button>
           </div>
         </div>
       </section>
