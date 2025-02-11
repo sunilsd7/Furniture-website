@@ -41,7 +41,7 @@ const Navbar = () => {
             <ul className="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0">
               <li>
                 <a
-                  href="#"
+                  href="#home"
                   className=""
                 >
                   Home
@@ -49,7 +49,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className=""
                 >
                   Services
@@ -57,7 +57,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#doctors"
                   className=""
                 >
                   Doctors
@@ -65,7 +65,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#product"
                   className=""
                 >
                   Product
@@ -73,7 +73,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#gallery"
                   className=""
                 >
                   Gallery
