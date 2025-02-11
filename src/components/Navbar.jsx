@@ -1,53 +1,48 @@
-import React, { useState } from 'react';
-
+import React, { useState,useRef,useEffect } from 'react';
+import { FiMenu, FiX } from "react-icons/fi";
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setMenuOpen(!menuOpen);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <>
       <nav className="bg-white shadow-md py-4 px-6">
-        <div className="container mx-auto flex justify-between items-center">
-          {/* Brand Logo */}
+        <div className="container mx-auto flex justify-between ">
+         
           <div className="text-blue-600 font-bold text-2xl">Furniture</div>
 
-          {/* Hamburger Menu for Mobile */}
-          <div className="block md:hidden">
+          <div className=" md:hidden ">
             <button
               onClick={toggleMenu}
-              className="text-gray-600 hover:text-blue-600 focus:outline-none"
+             
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
+              {menuOpen ? <FiX/>  : <FiMenu />}
             </button>
           </div>
 
-          {/* Navigation Links */}
           <div
-            className={`${
-              isOpen ? 'block' : 'hidden'
-            } md:flex md:items-center w-full md:w-auto`}
+            className="hidden md:flex md:items-center w-full md:w-auto "
           >
             <ul className="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0">
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 hover:text-blue-600 block py-2 md:py-0"
+                  className=""
                 >
                   Home
                 </a>
@@ -55,7 +50,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 hover:text-blue-600 block py-2 md:py-0"
+                  className=""
                 >
                   Services
                 </a>
@@ -63,7 +58,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 hover:text-blue-600 block py-2 md:py-0"
+                  className=""
                 >
                   Doctors
                 </a>
@@ -71,7 +66,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 hover:text-blue-600 block py-2 md:py-0"
+                  className=""
                 >
                   Product
                 </a>
@@ -79,13 +74,68 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 hover:text-blue-600 block py-2 md:py-0"
+                  className=""
                 >
                   Gallery
                 </a>
               </li>
             </ul>
           </div>
+          {menuOpen && (
+          <div
+            ref={menuRef}
+            className="absolute top-14 right-6  text-black rounded-lg shadow-lg p-4 z-50"
+          >
+            <ul className="flex flex-col gap-y-4 text-lg">
+              <li>
+                <a
+                  href="#home"
+                  className="hover:text-blue"
+                  onClick={toggleMenu}
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  className="hover:text-blue"
+                  onClick={toggleMenu}
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#doctors"
+                  className="hover:text-blue"
+                  onClick={toggleMenu}
+                >
+                  Doctors
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#product"
+                  className="hover:text-blue"
+                  onClick={toggleMenu}
+                >
+                  Product
+                </a>
+              </li>
+              <li className="">
+                <a
+                  className=" hover:text-blue"
+                  href='#gallery'
+                
+                  onClick={toggleMenu}
+                >
+                  Gallery
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
         </div>
       </nav>
     </>

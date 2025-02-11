@@ -6,7 +6,7 @@ import decoration from '../assets/decoration.png';
 const Collection = () => {
   return (
     <>
-      {/* Text Section */}
+     
       <section className="text-center mt-8 px-4">
         <p className="font-bold text-2xl mb-4">Inspiration Collection</p>
         <p className="text-gray-600">
@@ -14,9 +14,9 @@ const Collection = () => {
         </p>
       </section>
 
-      {/* Image Grid Section */}
+
       <div className="flex flex-col md:flex-row justify-center items-center py-8 px-4 md:px-10 mt-8 space-y-6 md:space-y-0 md:space-x-6">
-        {/* Decoration Image */}
+       
         <div className="w-full md:w-1/3 lg:w-1/4">
           <img
             src={decoration}
@@ -25,7 +25,7 @@ const Collection = () => {
           />
         </div>
 
-        {/* Sofa Image */}
+     
         <div className="w-full md:w-1/3 lg:w-1/4">
           <img
             src={sofa}
@@ -34,7 +34,6 @@ const Collection = () => {
           />
         </div>
 
-        {/* Hanging Lamp Image */}
         <div className="w-full md:w-1/3 lg:w-1/4">
           <img
             src={hanginglamp}
